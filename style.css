@@ -9,7 +9,7 @@
     --Bright-Red: hsl(356, 69%, 56%);
     
     --Facebook: hsl(208, 92%, 53%);
-    --Twitter: hsl(203, 89%, 53%)
+    --Twitter: hsl(203, 89%, 53%);
     --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
     --YouTube: hsl(348, 97%, 39%);
     
@@ -26,8 +26,9 @@
     /* Dark Theme */
     
     --Very-Dark-Blue: hsl(230, 17%, 14%); /*BG*/
-    --Very-Dark-Blue-Top: hsl(232, 19%, 15%); /*Top BG Pattern*/
+    --Very-Dark-Blue-Top: hsl(231, 20%, 18%); /*Top BG Pattern*/
     --Dark-Desaturated-Blue: hsl(228, 28%, 20%); /*Card BG*/
+    --Dark-Hover: hsl(230, 28%, 32%); /*Card BG Hover*/
     --Desaturated-Blue: hsl(228, 34%, 66%); /*Text*/
     --White: hsl(0, 0%, 100%); /*Text*/
     
@@ -54,6 +55,16 @@ body {
     z-index: -1;
 }
 
+.bg-bottom{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 650px;
+    background-color: var(--Very-Dark-Blue);
+    z-index: -1;
+}
+
+
 #wrapper {
     padding: 20px 90px 0px 70px;
 }
@@ -65,7 +76,7 @@ body {
     justify-content: space-between;
 }
 
-.title > h2 {
+.title > h1 {
     color: var(--White);
 }
 
@@ -100,4 +111,156 @@ body {
     height: 15px;
     border-radius: 50%;
     background-color: var(--Dark-Desaturated-Blue);
+}
+
+
+#platforms {
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: var(--Dark-Desaturated-Blue);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: var(--Dark-Hover);
+    cursor: pointer;
+}
+
+.username {
+    color: var(--Desaturated-Blue);
+    font-size: 1em;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.username > img {
+    position: relative;
+    top: 5px;
+}
+
+.number-card {
+    color: var(--White);
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.followers {
+    color: var(--Desaturated-Blue);
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.daily-diff {
+    padding-top: 25px;
+}
+
+.daily-diff > img, .stat-diff > img {
+    position: relative;
+    bottom: 2px;
+}
+
+.up {
+    color: var(--Lime-Green);
+}
+
+.down {
+    color: var(--Bright-Red);
+}
+
+.line1 {
+    position: relative;
+    bottom: 25px;
+    height: 5px;
+    width: 300px;
+    background-color: var(--Facebook);
+}
+
+.line2 {
+    position: relative;
+    bottom: 25px;
+    height: 5px;
+    width: 300px;
+    background-color: var(--Twitter);
+}
+
+.line3 {
+    position: relative;
+    bottom: 25px;
+    height: 5px;
+    width: 300px;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.line4 {
+    position: relative;
+    bottom: 25px;
+    height: 5px;
+    width: 300px;
+    background-color: var(--YouTube);
+}
+
+#overview {
+    color: var(--White);
+}
+
+#statistics {
+    position: relative;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120px;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: var(--Dark-Desaturated-Blue);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tile:hover {
+    background-color: var(--Dark-Hover);
+    cursor: pointer;
+}
+
+.stat {
+    color: var(--Desaturated-Blue);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.icon {
+    justify-self: end;
+}
+
+.number-tile {
+    color: var(--White);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.stat-diff {
+    position: relative;
+    top: 15px;
+    justify-self: end;
 }
