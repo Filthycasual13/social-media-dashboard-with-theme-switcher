@@ -1,0 +1,142 @@
+
+:root {
+    
+    
+    /* Light Theme */
+    
+    --White: hsl(0, 0%, 100%); /*BG*/
+    --Very-Pale-Blue: hsl(225, 100%, 98%); /*Top BG Pattern*/
+    --Light-Grayish-Blue: hsl(227, 47%, 96%); /*Card BG*/
+    --Light-Hover: hsl(227, 9%, 81%); /*Card Hover*/
+    --Dark-Grayish-Blue: hsl(228, 12%, 44%); /*Text*/
+    --Very-Dark-Blue: hsl(230, 17%, 14%); /*Text*/
+}
+
+
+
+/* BACKGROUND */
+
+.bg-top-light{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: var(--White);
+    z-index: -1;
+}
+
+.bg-bottom-light{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 650px;
+    background-color: var(--White);
+    z-index: -1;
+}
+
+
+/* HEADING */
+
+.title-light > h1 {
+    color: var(--Very-Dark-Blue);
+}
+
+.title-light > h4 {
+    position: relative;
+    bottom: 10px;
+    color: var(--Desaturated-Blue);
+}
+
+
+
+/* TOGGLE BUTTON */
+
+.toggle-light {
+    position: relative;
+    right: 100px;
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 700;
+}
+
+
+/* CARDS */
+
+.card-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-light:hover {
+    background-color: var(--Light-Hover);
+    cursor: pointer;
+}
+
+.username-light {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 1em;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.username-light > img {
+    position: relative;
+    top: 5px;
+}
+
+.number-card-light {
+    color: var(--Very-Dark-Blue);
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.followers-light {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+/* STATISTICS */
+
+.overview-light {
+    color: var(--Dark-Grayish-Blue);
+}
+
+
+.tile-light {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 120px;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tile-light:hover {
+    background-color: var(--Light-Hover);
+    cursor: pointer;
+}
+
+.stat-light {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+
+.number-tile-light {
+    color: var(--Very-Dark-Blue);
+    font-size: 2em;
+    font-weight: 700;
+}
+ 

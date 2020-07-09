@@ -47,6 +47,14 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+
+
+
+
+
+
+/* BACKGROUND */
+
 .bg-top{
     position: absolute;
     width: 100%;
@@ -65,9 +73,20 @@ body {
 }
 
 
+
 #wrapper {
     padding: 20px 90px 0px 70px;
 }
+
+
+
+
+
+
+
+
+
+/* HEADING */
 
 .header {
     display: flex;
@@ -86,6 +105,17 @@ body {
     color: var(--Desaturated-Blue);
 }
 
+
+
+
+
+
+
+
+
+
+/* TOGGLE BUTTON */
+
 .toggle {
     position: relative;
     right: 100px;
@@ -93,25 +123,76 @@ body {
     font-weight: 700;
 }
 
-.bar {
+.switch {
     position: relative;
-    left: 100px;
-    bottom: 20px;
-    width: 50px;
-    height: 22px;
-    border-radius: 20px;
-    background-image:linear-gradient( hsl(210, 78%, 56%), hsl(146, 68%, 55%)) ;
-}
+    left: 10px;
+    bottom: 4px;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+  }
+  
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 4px;
+    top: 3px;
+    background-color: var(--Very-Dark-Blue);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
 
-.circle {
-    position: relative;
-    top: 4px;
-    left: 5px;
-    width: 15px;
-    height: 15px;
+  input:checked + .slider:before{
+    background-color: var(--White);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  
+  .slider.round {
+    border-radius: 28px;
+  }
+  
+  .slider.round:before {
     border-radius: 50%;
-    background-color: var(--Dark-Desaturated-Blue);
-}
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* CARDS */
 
 
 #platforms {
@@ -192,7 +273,7 @@ body {
 
 .line2 {
     position: relative;
-    bottom: 25px;
+    bottom: 26px;
     height: 5px;
     width: 300px;
     background-color: var(--Twitter);
@@ -214,7 +295,13 @@ body {
     background-color: var(--YouTube);
 }
 
-#overview {
+
+
+
+
+/* STATISTICS */
+
+.overview {
     color: var(--White);
 }
 
